@@ -36,21 +36,21 @@ const daysContainer = document.querySelector(".days"),
   todayBtn = document.querySelector(".today-btn");
 
 const months = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
+  "Janvier",
+  "Février",
+  "Mars",
+  "Avril",
+  "Mai",
+  "Juin",
+  "Juillet",
+  "Août",
+  "Septembre",
+  "Octobre",
+  "Novembre",
+  "Décembre",
 ];
 
-const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+const days = ["D", "L", "M", "M", "J", "V", "S"];
 
 // get current date
 const date = new Date();
@@ -100,7 +100,7 @@ function renderCalendar() {
     }
   }
 
-  // next MOnth days
+  // next Month days
   for (let j = 1; j <= nextDays; j++) {
     days += `<div class="day next">${j}</div>`;
   }
@@ -124,11 +124,11 @@ nextBtn.addEventListener("click", () => {
   renderCalendar();
 });
 
-// prev monyh btn
+// prev month btn
 prevBtn.addEventListener("click", () => {
   // increase by one
   currentMonth--;
-  // check if let than 0 then make it 11 and deacrease year
+  // check if let than 0 then make it 11 and decrease year
   if (currentMonth < 0) {
     currentMonth = 11;
     currentYear--;
